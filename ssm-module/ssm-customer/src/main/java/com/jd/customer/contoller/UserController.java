@@ -39,7 +39,7 @@ public class UserController extends AbstractController {
     @RequestMapping(value = "/userList")
     public R userList(@RequestParam Map<String, Object> params) {
         System.out.println("1111111"+params.toString());
-        IPage<String> userList = userService.selectUserList((Page<User>) mpPageConvert.<User>pageParamConvert(params), 25);
+        IPage<String> userList = userService.selectUserList((Page<User>) mpPageConvert.<User>pageParamConvert(params));
         return R.ok().put("page", mpPageConvert.pageValueConvert(userList));
     }
 }

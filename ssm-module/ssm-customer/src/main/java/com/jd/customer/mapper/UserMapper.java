@@ -11,5 +11,5 @@ public interface UserMapper extends BaseMapper<User> {
     /**
      * 分页查询
      */
-    IPage<String> selectUserList(Page<?> page, Integer age);
+    IPage<String> selectUserList(Page<?> page);
 }

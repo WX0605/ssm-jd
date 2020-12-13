@@ -16,8 +16,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     private final UserMapper userMapper;
     @Override
-    public IPage<String> selectUserList(Page<User> page, Integer age) {
-        return userMapper.selectUserList(page,age);
+    public IPage<String> selectUserList(Page<User> page) {
+        return userMapper.selectUserList(page);
     }
 
 
